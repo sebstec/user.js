@@ -11,3 +11,21 @@ user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false); // 2
 // 2830 optional to match when you use Ctrl-Shift-Del (settings>History>Custom Settings>Clear History)
 // user_pref("privacy.cpd.history", false); // FF127 or lower
 // user_pref("privacy.clearHistory.historyFormDataAndDownloads", false); // FF128+
+
+// (S)
+/* use custom style */
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
+/* dont clear cookies on shutdown */ 
+user_pref("privacy.clearOnShutdown.cookies", false); // Cookies
+user_pref("privacy.clearOnShutdown.offlineApps", false); // Site Data
+user_pref("privacy.clearOnShutdown.sessions", false);  // Active Logins [DEFAULT: true]
+user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", false); // Cookies, Site Data, Active Logins [FF128+]
+
+/* dont clear cache on shutdown */
+user_pref("privacy.clearOnShutdown.cache", false);     // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown_v2.cache", false);  // [FF128+] [DEFAULT: true]
+
+/* addition to proposed override */
+user_pref("privacy.clearOnShutdown.downloads", false); // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown.formdata", false);  // [DEFAULT: true]
